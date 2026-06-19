@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adsorption Kinetic Model</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Adsorption Kinetic Modelling</h1>
+
+    <p>Enter time and qt values separated by commas.</p>
+
+    <label>Time:</label>
+    <input id="timeInput" value="0,5,10,20,30,60,90,120">
+
+    <label>qt:</label>
+    <input id="qtInput" value="0,12,20,31,38,45,48,50">
+
+    <label>Select model:</label>
+    <select id="modelSelect">
+      <option value="pfo">Pseudo-first-order</option>
+      <option value="pso">Pseudo-second-order</option>
+    </select>
+
+    <button onclick="runModel()">Run Model</button>
+
+    <div id="results"></div>
+
+    <canvas id="chart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
